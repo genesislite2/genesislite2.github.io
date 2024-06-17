@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    
+    <!-- Add the Orbitron font -->
+    <style>
+        /* Import the Orbitron font */
+        @font-face {
+            font-family: 'Orbitron';
+            src: url('images/Exo/static/Exo2-Medium.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        .lite-text {
+            position: absolute;
+            bottom: -110px;
+            left: 8%;
+            transform: translateX(-50%);
+            color: #5b5b5b;
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+            font-size: 25px;
+            z-index: 4;
+        }
+
+        .subtitle {
+            position: absolute;
+            bottom: -720px;
+            left: 22%;
+            transform: translateX(-50%);
+            color: #cecece;
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+            font-size: 15px;
+            z-index: 4;
+            display: flex;
+
+        }
+
+
+        .holo {
+            position: absolute;
+            bottom: -920px;
+            left: 62%;
+            transform: translateX(-50%);
+            height: 500px;
+            opacity: .25;
+
+
+            
+        }
+
+        .subtitle_two {
+            position: absolute;
+            bottom: -850px;
+            left: 22%;
+            transform: translateX(-50%);
+            color: #cecece;
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+            font-size: 15px;
+            z-index: 4;
+        }
+
+        .subtitle_three {
+            position: absolute;
+            bottom: -980px;
+            left: 52%;
+            transform: translateX(-50%);
+            color: #7e7e7e;
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+            font-size: 26px;
+            z-index: 4;
+        }
+
+        .subtitle_four {
+            position: absolute;
+            bottom: -1080px;
+            left: 52%;
+            transform: translateX(-50%);
+            color: #9b9b9b;
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+            font-size: 15px;
+            z-index: 4;
+        }
+
+        .subtitle_five {
+            position: absolute;
+            bottom: -1250px;
+            left: 53%;
+            transform: translateX(-50%);
+            color: #cecece;
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+            font-size: 18px;
+            z-index: 4;
+        }
+
+        .subtitle_six {
+            position: absolute;
+            bottom: -1450px;
+            left: 53%;
+            transform: translateX(-50%);
+            color: #e73f78; /* #e73f78  #ff861b colors */
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+            font-size: 23px;
+            z-index: 4;
+        }
+
+        .subtitle_seven {
+            position: absolute;
+            bottom: -1510px;
+            left: 53%;
+            transform: translateX(-50%);
+            color: #cecece;
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+            font-size: 18px;
+            z-index: 4;
+        }
+
+        .subtitle_eight {
+            position: absolute;
+            bottom: -1560px;
+            left: 53%;
+            transform: translateX(-50%);
+            color: #cecece;
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+            font-size: 18px;
+            z-index: 4;
+        }
+        .underline {
+            text-decoration: underline;
+        }
+
+
+        .grey {
+            position: absolute;
+            top: 2000px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+            width: 100%;
+            filter: blur(20px);
+        }
+
+
+        .watch-text {
+            position: absolute;
+            bottom: -530px;
+            left: 20%;
+            transform: translateX(-50%);
+            color: #5b5b5b;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 25px;
+            z-index: 4;
+        }
+        .additional-text {
+            position: absolute;
+            top: 115%; /* Adjust vertical position */
+            left: 26%;
+            transform: translate(-50%, 50%); /* Adjust vertical and horizontal position */
+            color: #b4b3b3; /* Set text color */
+            font-family: 'Orbitron', sans-serif; /* Set font family */
+            font-size: 18px; /* Set font size */
+            text-align: center; /* Center align text */
+            width: 40%; /* Adjust width as needed */
+            z-index: 3; /* Set the z-index */
+        }
+
+        .additional-text2 {
+        position: absolute;
+        top: 122%; /* Adjust vertical position */
+        left: 80%;
+        transform: translate(-50%, 50%); /* Adjust vertical and horizontal position */
+        color: #000000; /* Set text color */
+        font-family: 'Orbitron', sans-serif; /* Set font family */
+        font-size: 12px; /* Set font size */
+        text-align: center; /* Center align text */
+        width: 30%; /* Adjust width as needed */
+        z-index: 3; /* Set the z-index */
+        }
+
+        .language {
+        position: absolute;
+        top: 126%; /* Adjust vertical position */
+        left: 80%;
+        transform: translate(-50%, 50%); /* Adjust vertical and horizontal position */
+        color: #e73f78; /* Set text color */
+        font-family: 'Orbitron', sans-serif; /* Set font family */
+        font-size: 12px; /* Set font size */
+        text-align: center; /* Center align text */
+        width: 30%; /* Adjust width as needed */
+        z-index: 3; /* Set the z-index */
+        }
+
+        .additional-text3 {
+        position: absolute;
+        top: 122%; /* Adjust vertical position */
+        left: 80%;
+        transform: translate(-50%, 50%); /* Adjust vertical and horizontal position */
+        color: #000000; /* Set text color */
+        font-family: 'Orbitron', sans-serif; /* Set font family */
+        font-size: 12px; /* Set font size */
+        text-align: center; /* Center align text */
+        width: 30%; /* Adjust width as needed */
+        z-index: 3; /* Set the z-index */
+        }
+        .additional-text4 {
+        position: absolute;
+        top: 168%; /* Adjust vertical position */
+        left: 24%;
+        transform: translate(-50%, 50%); /* Adjust vertical and horizontal position */
+        color: #b4b3b3; /* Set text color */
+        font-family: 'Orbitron', sans-serif; /* Set font family */
+        font-size: 18px; /* Set font size */
+        text-align: center; /* Center align text */
+        width: 40%; /* Adjust width as needed */
+        z-index: 3; /* Set the z-index */
+        }
+
+        /* Style for the "Genesis" text */
+        .genesis-text {
+        position: absolute;
+        top: 120%; /* Adjust vertical position */
+        left: 80%; /* Adjust horizontal position */
+        transform: translate(-50%, -50%);
+        color: #333232; /* White color */
+        font-size: 30px; /* Adjust font size */
+        font-family: 'Orbitron', sans-serif; /* Orbitron font */
+        z-index: 3;
+        }
+
+        /* Apply Orbitron font to links */
+        nav a {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 20px;
+            color: #343030;
+            text-decoration: none;
+        }
+
+        /* Change link color on hover */
+        nav a:hover {
+            color: #666;
+        }
+
+        /* Add margin to the top of the div containing links */
+        .nav-links {
+            margin-top: 30px; /* Adjust this value as needed */
+        }
+        .nav-links2 {
+            margin-top: 40px; /* Adjust this value as needed */
+        }
+        
+        /* Noise effect animation */
+        @keyframes noise {
+            0% { background-position: 0 0; }
+            25% { background-position: 10% 5%; }
+            50% { background-position: -5% -10%; }
+            75% { background-position: 5% 15%; }
+            100% { background-position: 0 0; }
+        }
+
+        /* Apply noise effect to the background */
+        .noise-bg {
+            animation: noise 0.5s infinite linear alternate-reverse;
+            background-image: url('images/noise2.png'); /* Adjust the path */
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 85%;
+            opacity: .15;
+            z-index: 2;
+            mix-blend-mode: overlay;
+            
+        }
+
+        /* Style for the text "Featuring" */
+        .text-overlay {
+            position: absolute;
+            top: 50%; /* Adjust vertical position */
+            left: 79%;
+            transform: translate(-50%, -50%);
+            color: #000000;
+            font-size: 50px; /* Adjust font size */
+            font-family: 'Orbitron', sans-serif;
+            z-index: 3;
+        }
+
+        /* Apply opacity transition to fade-effect class */
+        .fade-effect {
+            opacity: 1;
+            transition: opacity 0.3s ease; /* Add transition effect */
+        }
+
+        /* Style for the second section */
+
+
+        /* Additional style for the first section */
+        #image-section {
+            position: relative;
+            height: 100vh; /* Set the height to cover the viewport */
+            width: 100vw;
+            object-fit: cover;
+            overflow-x: hidden;
+            
+
+        }
+
+        #image-section img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .logo {
+            position: absolute;
+            top: 122%;
+            left: 90%;
+            transform: translate(-50%, -50%);
+            z-index: 5; /* Ensure the logo appears on top */
+            width: 350px;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .glassessize {
+            position: absolute;
+            bottom: -160%; /* Adjust top position */
+            left: 10%; /* Adjust left position */
+            width: 100%; /* Adjust image width */
+            object-fit: cover;
+            z-index: 4;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .watchsize {
+            position: absolute;
+            bottom: -164.5%; /* Adjust top position */
+            left: 10%; /* Adjust left position */
+            object-fit: cover;
+            height: 100vh;
+            width: 100vw;
+            z-index: 4;
+            display: flex;
+        }
+        
+
+        /* Style for the horizontal rule */
+        .hr1 {
+            border-color: #7e7e7e; /* Set the color */
+            margin: 0 auto; /* Center the hr */
+            width: 100%; /* Set the width */
+            opacity: 0.5; /* Set the opacity */
+            z-index: 3; /* Set the z-index */
+            position: absolute; /* Position it absolutely */
+            top: 150%; /* Place it in the middle */
+            transform: translateY(-50%); 
+            object-fit: cover;
+        }
+
+        .hr2 {
+            border-color: #7e7e7e; /* Set the color */
+            margin: 0 auto; /* Center the hr */
+            width: 100%; /* Set the width */
+            opacity: 0.5; /* Set the opacity */
+            z-index: 3; /* Set the z-index */
+            position: absolute; /* Position it absolutely */
+            top: 270%; /* Place it in the middle */
+            transform: translateY(-50%); 
+            object-fit: cover;
+        }
+    </style>
+
+    <link href="css/0.BCsos4jv.css" rel="stylesheet">
+    <title>The 01 Project</title>
+    <!-- HEAD_svelte-1uhmzd1_START -->
+    <!-- Meta tags -->
+    <!-- HEAD_svelte-1uhmzd1_END -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+</head>
+<body data-sveltekit-preload-data="hover">
+    <div style="display: contents">  
+        <main> 
+            <div class="relative h-screen cursor-default selection:bg-black selection:text-black">  
+                <div class="noise-bg"></div> <!-- Add this noise background div -->
+                <img src="images/watch_sketch.png" style="position: absolute; object-fit: cover; height: 100px; width: 100px; top: auto;" >
+                <section id="image-section">
+
+                    <img src="images/earth.png" alt="Earth Image" style="object-fit: cover;">
+
+                    <div class="text-overlay fade-effect">genesis lite.</div> <!-- Text overlay -->
+
+
+                </section> 
+                <div class="genesis-text">genesis</div> <!-- New Genesis text -->
+                <div class="additional-text2">Founded 2024</div>
+                <div class="language">クレイジーなことをしてください</div>
+                <img src="images/logo_black.png" alt="Logo" class="logo"> <!-- Add the logo image -->
+                <hr class="hr1">
+                <img src="images/sketch1.png" alt="Sketch Image" class="glassessize">
+                <img src="images/sketch2.png" alt="Sketch Image" class="watchsize">
+
+                <nav class="fixed top-0 z-10 flex w-full items-center justify-between px-6 py-6 text-white sm:px-12">
+                    <div class="flex items-center space-x-4" data-svelte-h="svelte-whwhef">
+                        <a href="/" class="h-8 w-8 rounded-full bg-white saturate-200"></a>
+                    </div> 
+                    <div class="flex flex-col text-lg md:flex-row md:space-x-12 nav-links2" style="margin-left: -600px;"> <!-- Add class nav-links here -->
+                        <a href="https://changes.openinterpreter.com/" class="hover:underline" data-svelte-h="svelte-13v0mlt">contact</a> 
+                        <a href="https://discord.gg/Hvz9Axh84z" class="hover:underline" data-svelte-h="svelte-1tesvs7">career</a> 
+                    </div>
+                    <div class="flex flex-col text-lg md:flex-row md:space-x-12 nav-links" style="margin-right: 100px;">
+                        <a href="https://0ggfznkwh4j.typeform.com/to/WfuYTxMM" class="hover:underline" data-svelte-h="svelte-1n4njtj">genesis lite</a>
+                        <a href="https://0ggfznkwh4j.typeform.com/to/W5At4fmF" class="rounded border px-2 hover:underline" data-svelte-h="svelte-16er9ox">technology</a>
+                    </div>
+                </nav> 
+                
+                <!-- Second Section -->
+                <section id="second-section">
+                    <div class="lite-text">lite</div> <!-- Add "Lite" text -->
+                    <div class="watch-text">holographic call from your watch</div> <!-- Add "Lite" text -->
+                    <div class="additional-text">Immerse yourself in the holographic reality of our AR Glasses and Smartwatch that allows you to view, interact with, and control lifelike 3D holograms to communicate.</div>
+                    <div class="additional-text4">Our Lite Smartwatch allows you to project photorealistic 3D holograms of others into the real world. </div>
+
+                </section>
+
+                <section id="meow-section">
+                    <img src="images/hologram.PNG" class="holo">
+                    <div class="subtitle"> Smartwatch</div> 
+                    <div class="subtitle_two">AR Glasses</div> 
+                    <div class="subtitle_three">call with your watch and accept the call with AR Glasses </div> 
+                    <div class="subtitle_four">These glasses allow you to view and control the positioning of your hologram projected from the smartwatch. You can walk around the room and your hologram from across the World will synchronize with your movements. </div> 
+                    <div class="subtitle_five">Our compact smartwatch gives you the power to initiate holographic video calls at any moment. Simply activate the environment capture mode and the smartwatch will scan your surroundings to send this data to the AR glasses on User 2 who can then interact with their hologram to move around and see the environment that was scanned. </div> 
+                    <hr class="hr2">
+                    <img src="images/--.png" class="grey"> 
+                    <div class="subtitle_six">what will you see through the AR Glasses? </div> 
+                    <div class="subtitle_seven">When the environment is scanned from your watch, you should begin to see it from your AR Glasses. </div> 
+                    <a href="https://example.com" class="subtitle_eight">For information  <span class="underline"> see the link</a></div>
+                    <video src="images/glasses.mov" autoplay loop muted style="position: absolute; top: 2400px; left: 380px; max-width: 60%; max-height: 60%; z-index: 6"></video>
+
+
+
+
+                </section>
+
+                
+            </div>
+        </main>     
+    </div>
+                </section> 
+
+                    <a class="genesis-text">genesis</a> <!-- New Genesis text -->
+                    <a class="additional-text2">Founded 2024</a>
+                    <a class="language">クレイジーなことをしてください</a>
+                    <hr class="hr5">
+
+
+
+                </div>
+    <script>
+        {
+            __sveltekit_1ctu2ho = {
+                base: new URL(".", location).pathname.slice(0, -1)
+            };
+
+            const element = document.currentScript.parentElement;
+
+            const data = [null,null];
+
+            Promise.all([
+                import("./_app/immutable/entry/start.DMk8Y-sw.js"),
+                import("./_app/immutable/entry/app.B3WvrjJY.js")
+            ]).then(([kit, app]) => {
+                kit.start(app, element, {
+                    node_ids: [0, 5],
+                    data,
+                    form: null,
+                    error: null
+                });
+            });
+
+            window.addEventListener('scroll', function() {
+                const scrollPos = window.scrollY;
+                const windowHeight = window.innerHeight;
+                const imageSection = document.getElementById('image-section');
+
+                if (imageSection) {
+                    const imageSectionHeight = imageSection.offsetHeight;
+                    const imageSectionTop = imageSection.offsetTop;
+
+                    const opacity = 1 - Math.max(0, Math.min(1, (scrollPos + windowHeight - imageSectionTop) / imageSectionHeight));
+
+                    // Toggle fade-effect class based on opacity
+                    document.querySelector('.text-overlay').classList.toggle('fade-effect', opacity > 0);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
